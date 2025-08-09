@@ -1,8 +1,8 @@
 # netlify.toml
 [build]
-  command = "ng build --configuration=production"
+  command = "npm ci && npm run build"
   publish = "dist/qa-portfolio-angular/browser"
-  framework = "#static"   # <- forces NO framework runtime/plugins
+  framework = "#static"   # Force static: prevents Netlify from auto-attaching the Angular runtime
 
 [[redirects]]
   from = "/*"
