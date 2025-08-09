@@ -1,8 +1,10 @@
-# netlify.toml
 [build]
   command = "npm install && npm run build"
   publish = "dist/qa-portfolio-angular/browser"
   framework = "#static"
+
+[build.environment]
+  NODE_VERSION = "20.19.0"   # Angular 18 happy path
 
 [[redirects]]
   from = "/*"
