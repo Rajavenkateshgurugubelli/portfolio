@@ -1,0 +1,11 @@
+.card {
+  margin-bottom: 18px;
+  padding: 18px;
+  background: #1e293b;
+  border-radius: 12px;
+  color: #e6edf7;
+}
+.muted {
+  color: #97a4b8;
+  font-size: 0.98rem;
+}

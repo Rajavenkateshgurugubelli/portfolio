@@ -1,0 +1,22 @@
+<section>
+  <h2 style="color:var(--acc1);margin-bottom:18px;">Top Skills & Tools</h2>
+  <div class="skills-grid">
+    <div
+      *ngFor="let skill of skills"
+      class="skill-card"
+      (click)="selectSkill(skill)"
+      [class.selected]="selectedSkill?.name === skill.name"
+      tabindex="0"
+      role="button"
+      aria-label="{{skill.name}}"
+    >
+      <img [src]="skill.logo" [alt]="skill.name + ' logo'" />
+      <span class="skill-label">{{ skill.name }}</span>
+    </div>
+  </div>
+  <div *ngIf="selectedSkill" class="skill-detail card">
+    <h3>{{ selectedSkill.name }}</h3>
+    <p>{{ selectedSkill.description }}</p>
+    <button (click)="selectedSkill = null" class="close-btn">Close</button>
+  </div>
+</section>
