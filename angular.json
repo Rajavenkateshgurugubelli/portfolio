@@ -1,14 +1,13 @@
 {
   "$schema": "https://json.schemastore.org/angular-cli",
   "version": 1,
-  "defaultProject": "qa-portfolio-angular",
   "projects": {
     "qa-portfolio-angular": {
       "projectType": "application",
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
-      "architect": {
+      "targets": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
@@ -23,24 +22,14 @@
               "src/assets",
               "src/_redirects"
             ],
-            "styles": [
-              "src/styles.css"
-            ],
+            "styles": ["src/styles.css"],
             "scripts": []
           },
           "configurations": {
             "production": {
               "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "2mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
-                }
+                { "type": "initial", "maximumWarning": "500kb", "maximumError": "2mb" },
+                { "type": "anyComponentStyle", "maximumWarning": "6kb", "maximumError": "10kb" }
               ],
               "outputHashing": "all"
             },
@@ -57,12 +46,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
-            "production": {
-              "browserTarget": "qa-portfolio-angular:build:production"
-            },
-            "development": {
-              "browserTarget": "qa-portfolio-angular:build:development"
-            }
+            "production": { "browserTarget": "qa-portfolio-angular:build:production" },
+            "development": { "browserTarget": "qa-portfolio-angular:build:development" }
           },
           "defaultConfiguration": "development"
         }
