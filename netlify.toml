@@ -1,10 +1,10 @@
 [build]
   command = "npm install && npm run build"
-  publish = "dist/qa-portfolio-angular/browser"
+  publish = "dist/portfolio/browser"
   framework = "#static"
 
 [build.environment]
-  NODE_VERSION = "22.18.0"   # Angular 18 happy path
+  NODE_VERSION = "22.18.0"   # Or any Node version your Angular build supports
 
 [[redirects]]
   from = "/*"
