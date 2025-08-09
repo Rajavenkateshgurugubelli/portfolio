@@ -1,6 +1,8 @@
+# netlify.toml
 [build]
   command = "ng build --configuration=production"
   publish = "dist/qa-portfolio-angular/browser"
+  framework = "#static"   # <- forces NO framework runtime/plugins
 
 [[redirects]]
   from = "/*"
