@@ -5,8 +5,7 @@
   "scripts": {
     "start": "ng serve -o",
     "build": "ng build",
-    "preview": "ng serve --configuration=development",
-    "deploy:gh": "ng build --configuration=production && npx angular-cli-ghpages --dir=dist/qa-portfolio-angular/browser"
+    "preview": "ng serve --configuration=development"
   },
   "dependencies": {
     "@angular/animations": "^18.1.0",
@@ -25,7 +24,6 @@
     "@angular-devkit/build-angular": "^18.1.0",
     "@angular/cli": "^18.1.0",
     "@angular/compiler-cli": "^18.1.0",
-    "typescript": "~5.5.0",
-    "angular-cli-ghpages": "^2.1.3"
+    "typescript": "~5.5.0"
   }
 }
