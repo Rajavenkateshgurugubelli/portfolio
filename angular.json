@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/angular-cli",
   "version": 1,
   "projects": {
-    "qa-portfolio-angular": {
+    "portfolio": {
       "projectType": "application",
       "root": "",
       "sourceRoot": "src",
