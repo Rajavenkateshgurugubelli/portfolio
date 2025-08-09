@@ -1,38 +1,156 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Raja Ven — QA / SDET</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <style>
-    body{margin:0;font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#0b1220;color:#e6edf7}
-    a{color:#8ab4f8;text-decoration:none}
-    header{position:sticky;top:0;background:#0f172a;border-bottom:1px solid #1e2a44;padding:12px 16px}
-    .container{max-width:1040px;margin:0 auto;padding:16px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
-    .card{background:#0f172a;border:1px solid #1e2a44;border-radius:14px;padding:16px}
-    footer{color:#96a3b8;text-align:center;padding:24px 8px}
-    nav a{margin-right:12px}
-    .pill{display:inline-block;background:#1e2a44;border-radius:999px;padding:6px 10px;margin:0 8px 8px 0}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Raja Ven — QA / SDET</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <strong>Raja Ven — QA / SDET</strong>
-      <nav style="float:right">
-        <a routerLink="/">Home</a>
-        <a routerLink="/projects">Projects</a>
-        <a routerLink="/certifications">Certifications</a>
-        <a routerLink="/contact">Contact</a>
-      </nav>
-      <div style="clear:both"></div>
+<header>
+  <div class="nav">
+    <div class="brand"><span class="dot"></span><span>Raja Ven — QA / SDET</span></div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#certs">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section id="home" class="section hero">
+    <div>
+      <h1>Quality at speed.<br><span style="color:var(--acc1)">Confidence in every release.</span></h1>
+      <p class="lead">I’m a Software Tester / SDET focusing on web & API automation, CI/CD quality gates, and flake-resistant E2E suites.</p>
+      <ul class="badges">
+        <li class="skill-icon">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/playwright/playwright-original.svg" alt="Playwright logo">
+          <span class="skill-label">Playwright</span>
+        </li>
+        <li class="skill-icon">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg" alt="Selenium logo">
+          <span class="skill-label">Selenium</span>
+        </li>
+        <li class="skill-icon">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cypress/cypress-original.svg" alt="Cypress logo">
+          <span class="skill-label">Cypress</span>
+        </li>
+        <li class="skill-icon">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman logo">
+          <span class="skill-label">Postman</span>
+        </li>
+        <li class="skill-icon">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azuredevops/azuredevops-original.svg" alt="Azure DevOps logo">
+          <span class="skill-label">Azure DevOps</span>
+        </li>
+        <li class="skill-icon">
+          <img src="https://raw.githubusercontent.com/gilbarbara/logos/main/logos/k6.svg" alt="k6 logo" style="background:#fff;border-radius:6px;">
+          <span class="skill-label">k6</span>
+        </li>
+        <li class="skill-icon">
+          <img src="https://raw.githubusercontent.com/gilbarbara/logos/main/logos/tricentis-tosca.svg" alt="Tosca logo" style="background:#fff;border-radius:6px;">
+          <span class="skill-label">Tosca</span>
+        </li>
+        <li class="skill-icon">
+          <img src="https://raw.githubusercontent.com/gilbarbara/logos/main/logos/rest-assured.svg" alt="REST Assured logo" style="background:#fff;border-radius:6px;">
+          <span class="skill-label">REST Assured</span>
+        </li>
+      </ul>
     </div>
-  </header>
-  <app-root></app-root>
-  <footer>© <span id="yy"></span> Raja Ven</footer>
-  <script>document.getElementById('yy').textContent = new Date().getFullYear()</script>
+    <div class="card">
+      <h3 style="color:var(--acc2);margin-top:0;">Live Quality Signals</h3>
+      <p>
+        <span class="pill">E2E pass: 98%</span>
+        <span class="pill">Avg run: 6m</span>
+        <span class="pill">Open defects: 1</span>
+      </p>
+      <p class="muted">Demo numbers for the portfolio.</p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="section-head">
+      <h2 style="color:var(--acc1);margin:0;">Featured work</h2>
+      <div class="filters">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="e2e">E2E</button>
+        <button class="chip" data-filter="api">API</button>
+        <button class="chip" data-filter="perf">Performance</button>
+      </div>
+    </div>
+
+    <div class="grid" id="projectGrid">
+      <article class="card rise" data-tags="e2e">
+        <h3 style="color:var(--acc2);margin-top:0;">Playwright regression @ scale</h3>
+        <p>Shard-parallel E2E with trace viewer, video, and flake quarantine.</p>
+        <p>
+          <span class="pill">Playwright</span>
+          <span class="pill">GitHub Actions</span>
+          <span class="pill">Allure</span>
+        </p>
+      </article>
+      <article class="card rise" data-tags="api">
+        <h3 style="color:var(--acc2);margin-top:0;">Contract testing for microservices</h3>
+        <p>REST Assured + OpenAPI schema checks with env-aware smoke and nightly regression.</p>
+        <p>
+          <span class="pill">REST Assured</span>
+          <span class="pill">Postman</span>
+        </p>
+      </article>
+      <article class="card rise" data-tags="perf">
+        <h3 style="color:var(--acc2);margin-top:0;">k6 performance baselines</h3>
+        <p>Threshold-driven k6 with trend dashboards and CI gates to block regressions.</p>
+        <p>
+          <span class="pill">k6</span>
+          <span class="pill">Grafana</span>
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certs" class="section">
+    <h2 style="color:var(--acc1);margin-bottom:18px;">Certifications</h2>
+    <div class="grid">
+      <a class="card rise" href="https://learn.microsoft.com/certifications/azure-fundamentals/" target="_blank" rel="noopener">AZ-900 — Azure Fundamentals</a>
+      <a class="card rise" href="https://university.tricentis.com/" target="_blank" rel="noopener">Tosca — AS1</a>
+      <a class="card rise" href="https://university.tricentis.com/" target="_blank" rel="noopener">Tosca — AS2</a>
+      <a class="card rise" href="https://university.tricentis.com/" target="_blank" rel="noopener">Tosca — TDS1 </a>
+      <a class="card rise" href="https://university.tricentis.com/" target="_blank" rel="noopener">Tosca — TDS2</a>
+      <a class="card rise" href="https://university.tricentis.com/" target="_blank" rel="noopener">Tosca — AE1 </a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <h2 style="color:var(--acc1);margin-bottom:18px;">Contact</h2>
+    <div class="card">
+      <p>Email: <a href="mailto:rajagurugu18@gmail.com">rajagurugu18@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/raja-ven" target="_blank" rel="noopener">linkedin.com/in/raja-ven</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>© <span id="yy"></span> Raja Venatesh Gurugubelli</footer>
+<script>
+document.getElementById('yy').textContent = new Date().getFullYear();
+// simple filter
+const grid=document.getElementById('projectGrid');
+document.querySelectorAll('[data-filter]').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('[data-filter]').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const tag=btn.dataset.filter;
+    grid.querySelectorAll('article').forEach(card=>{
+      card.style.display=(tag==='all'||card.dataset.tags.includes(tag))?'block':'none';
+    });
+  });
+});
+</script>
 </body>
 </html>
