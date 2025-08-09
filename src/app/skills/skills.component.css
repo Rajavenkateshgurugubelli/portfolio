@@ -1,8 +1,16 @@
+.skills-title {
+  color: var(--acc1, #8ab4f8);
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1em;
+  text-align: left;
+}
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 22px;
+  gap: 24px;
   margin-bottom: 24px;
+  justify-content: flex-start;
 }
 .skill-card {
   display: flex;
@@ -23,7 +31,7 @@
   transform: scale(1.08);
   box-shadow: 0 6px 24px rgba(56,189,248,0.18);
   background: rgba(56,189,248,0.12);
-  border-color: var(--acc1);
+  border-color: var(--acc1, #8ab4f8);
 }
 .skill-card img {
   width: 44px;
@@ -34,7 +42,7 @@
 }
 .skill-label {
   font-size: 1rem;
-  color: var(--acc2);
+  color: var(--acc2, #334155);
   font-weight: 500;
   text-align: center;
   margin-top: 2px;
@@ -43,16 +51,17 @@
 .skill-detail.card {
   margin-top: 12px;
   padding: 18px;
-  background: var(--card);
+  background: #1e293b;
   border-radius: 14px;
-  color: var(--text);
+  color: #e6edf7;
   box-shadow: 0 2px 12px rgba(56,189,248,0.08);
+  max-width: 400px;
 }
 .close-btn {
   margin-top: 12px;
   padding: 6px 16px;
   border-radius: 8px;
-  background: var(--acc1);
+  background: var(--acc1, #8ab4f8);
   color: #fff;
   border: none;
   cursor: pointer;
@@ -60,5 +69,5 @@
   transition: background .2s;
 }
 .close-btn:hover {
-  background: var(--acc2);
+  background: var(--acc2, #334155);
 }

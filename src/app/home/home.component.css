@@ -1,0 +1,38 @@
+.main-nav {
+  background: #1e293b;
+  padding: 0.5em 0;
+  margin-bottom: 2em;
+  box-shadow: 0 2px 8px #33415544;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.main-nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none; /* <-- removes bullet points */
+  margin: 0;
+  padding: 0;
+}
+.main-nav li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.main-nav a {
+  color: var(--acc1, #8ab4f8);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.5em 0.8em;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+  display: block;
+}
+.main-nav a:hover {
+  background: var(--acc2, #334155);
+  color: #fff;
+}

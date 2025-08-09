@@ -1,0 +1,36 @@
+.section-title {
+  color: var(--acc1);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+.exp-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+.exp-card {
+  background: #1e293b;
+  border-radius: 14px;
+  color: #e6edf7;
+  padding: 18px;
+  box-shadow: 0 2px 12px rgba(56,189,248,0.08);
+}
+.exp-date {
+  color: #97a4b8;
+  font-size: 0.98rem;
+  font-weight: 400;
+  margin-left: 1em;
+}
+.exp-role {
+  font-weight: 600;
+  color: var(--acc2);
+  margin-bottom: 0.5em;
+}
+.exp-card ul {
+  margin: 0.5em 0 0 1em;
+  padding: 0;
+}
+.exp-card li {
+  margin-bottom: 0.4em;
+}
