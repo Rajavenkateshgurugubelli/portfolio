@@ -6,8 +6,14 @@ import { Component } from '@angular/core';
   template: `
   <section>
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/raja-ven" target="_blank" rel="noopener">/in/raja-ven</a></p>
+    <p>Email:
+      <a href="mailto:your.email@example.com">your.email&#64;example.com</a>
+    </p>
+    <p>LinkedIn:
+      <a href="https://www.linkedin.com/in/raja-ven" target="_blank" rel="noopener">
+        linkedin.com/in/raja-ven
+      </a>
+    </p>
   </section>
   `
 })
