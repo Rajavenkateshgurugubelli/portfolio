@@ -17,39 +17,15 @@
             "polyfills": [],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "css",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              "src/_redirects"
-            ],
+            "assets": ["src/favicon.ico","src/assets","src/_redirects"],
             "styles": ["src/styles.css"],
             "scripts": []
           },
           "configurations": {
-            "production": {
-              "budgets": [
-                { "type": "initial", "maximumWarning": "500kb", "maximumError": "2mb" },
-                { "type": "anyComponentStyle", "maximumWarning": "6kb", "maximumError": "10kb" }
-              ],
-              "outputHashing": "all"
-            },
-            "development": {
-              "buildOptimizer": false,
-              "optimization": false,
-              "vendorChunk": true,
-              "extractLicenses": false,
-              "sourceMap": true
-            }
+            "production": { "outputHashing": "all" },
+            "development": { "optimization": false, "sourceMap": true, "vendorChunk": true, "extractLicenses": false, "buildOptimizer": false }
           },
           "defaultConfiguration": "production"
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "configurations": {
-            "production": { "browserTarget": "qa-portfolio-angular:build:production" },
-            "development": { "browserTarget": "qa-portfolio-angular:build:development" }
-          },
-          "defaultConfiguration": "development"
         }
       }
     }
