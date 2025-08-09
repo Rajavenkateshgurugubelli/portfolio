@@ -4,7 +4,7 @@
   framework = "#static"
 
 [build.environment]
-  NODE_VERSION = "20.19.0"   # Angular 18 happy path
+  NODE_VERSION = "22.18.0"   # Angular 18 happy path
 
 [[redirects]]
   from = "/*"
