@@ -36,11 +36,11 @@ export class SkillsComponent {
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg',
       description: 'Automated REST API testing for complex workflows, validating order, payment, and billing integrations.'
     },
-    {
-      name: 'JMeter',
-      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jmeter/jmeter-original.svg',
-      description: 'Developed performance, load, and stress testing scenarios to uncover bottlenecks and improve scalability.'
-    },
+      {
+        name: 'JMeter',
+        logo: 'https://jmeter.apache.org/images/logo.svg',
+        description: 'Developed performance, load, and stress testing scenarios to uncover bottlenecks and improve scalability.'
+      },
     {
       name: 'Azure DevOps',
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azuredevops/azuredevops-original.svg',
