@@ -6,11 +6,6 @@
   padding-left: 24px;
 }
 
-.education h2 {
-  margin-bottom: 16px;
-  color: var(--acc1);
-}
-
 /* card layout */
 .edu-card {
   position: relative;

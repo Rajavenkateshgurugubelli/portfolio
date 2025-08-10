@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./certs.component.css'],
   template: `
   <section class="certificates">
-    <h2>Certificates</h2>
+    <h2 class="section-heading">Certificates</h2>
     <ul class="cert-grid">
       <li>
         <a class="card rise cert-card" href="https://learn.microsoft.com/certifications/azure-fundamentals/" target="_blank" rel="noopener">

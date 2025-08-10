@@ -12,12 +12,6 @@
   align-items: flex-start;
 }
 
-.contact-title {
-  margin: 0 0 12px;
-  font-size: 28px;
-  color: var(--acc1);
-}
-
 .contact-item {
   display: flex;
   align-items: center;

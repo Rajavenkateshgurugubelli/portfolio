@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   styleUrls: ['./contact.component.css'],
   template: `
-  <h2 class="contact-title">Contact</h2>
+  <h2 class="section-heading">Contact</h2>
   <section class="card contact-card">
     <div class="contact-container">
       <a class="contact-item" href="mailto:rajagurugu18&#64;gmail.com">

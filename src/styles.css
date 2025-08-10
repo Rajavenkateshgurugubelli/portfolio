@@ -130,6 +130,14 @@ h1 {
   text-shadow: none;
   animation: fadein 1.4s;
 }
+
+.section-heading {
+  margin: 0 0 16px;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--acc1);
+  text-align: left;
+}
 @keyframes fadein {
   from { opacity: 0; transform: translateY(24px);}
   to { opacity: 1; transform: none;}
