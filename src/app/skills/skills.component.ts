@@ -123,6 +123,11 @@ export class SkillsComponent {
           name: 'Jest',
           logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg',
           description: 'Unit and snapshot testing for React and Node.js apps.'
+        },
+        {
+          name: 'Spring Boot',
+          logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg',
+          description: 'Microservice framework for building robust backend services.'
         }
       ]
     },
@@ -148,6 +153,16 @@ export class SkillsComponent {
           name: 'GraphQL',
           logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg',
           description: 'Tested schema-driven APIs and complex queries.'
+        },
+        {
+          name: 'LoadRunner',
+          logo: 'https://cdn.simpleicons.org/microfocus/0078D4',
+          description: 'Performed enterprise-scale load testing.'
+        },
+        {
+          name: 'SoapUI',
+          logo: 'https://cdn.simpleicons.org/soapui/6DB33F',
+          description: 'Functional and SOAP service testing.'
         }
       ]
     },
@@ -223,6 +238,36 @@ export class SkillsComponent {
           name: 'Kubernetes',
           logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg',
           description: 'Orchestrated scalable test infrastructure.'
+        },
+        {
+          name: 'Amazon EC2',
+          logo: 'https://cdn.simpleicons.org/amazonec2/FF9900',
+          description: 'Provisioned and tested scalable compute instances.'
+        },
+        {
+          name: 'Amazon S3',
+          logo: 'https://cdn.simpleicons.org/amazons3/569A31',
+          description: 'Validated object storage integrations.'
+        },
+        {
+          name: 'Amazon RDS',
+          logo: 'https://cdn.simpleicons.org/amazonrds/527FFF',
+          description: 'Tested managed relational database services.'
+        },
+        {
+          name: 'AWS Lambda',
+          logo: 'https://cdn.simpleicons.org/awslambda/FF9900',
+          description: 'Verified serverless functions and triggers.'
+        },
+        {
+          name: 'Amazon CloudWatch',
+          logo: 'https://cdn.simpleicons.org/amazoncloudwatch/FF4F8B',
+          description: 'Monitored logs and metrics for AWS workloads.'
+        },
+        {
+          name: 'Amazon EKS',
+          logo: 'https://cdn.simpleicons.org/amazoneks/FF9900',
+          description: 'Orchestrated containerized tests on AWS.'
         }
       ]
     },
@@ -318,6 +363,16 @@ export class SkillsComponent {
           name: 'Dynatrace',
           logo: 'https://cdn.simpleicons.org/dynatrace/1496FF',
           description: 'Monitored application performance and user experience.'
+        },
+        {
+          name: 'Azure Monitor',
+          logo: 'https://cdn.simpleicons.org/azuremonitor/0078D4',
+          description: 'Tracked application health and telemetry in Azure.'
+        },
+        {
+          name: 'Application Insights',
+          logo: 'https://cdn.simpleicons.org/azuremonitor/5C2D91',
+          description: 'Collected performance metrics and diagnostics.'
         }
       ]
     },
@@ -338,6 +393,16 @@ export class SkillsComponent {
           name: 'Azure Service Bus',
           logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg',
           description: 'Tested distributed messaging patterns in Azure.'
+        },
+        {
+          name: 'USB',
+          logo: 'https://cdn.simpleicons.org/usb/000000',
+          description: 'Interfaced with hardware over USB for validation.'
+        },
+        {
+          name: 'BLE',
+          logo: 'https://cdn.simpleicons.org/bluetooth/0082FC',
+          description: 'Tested Bluetooth Low Energy protocols and devices.'
         }
       ]
     },
@@ -363,6 +428,16 @@ export class SkillsComponent {
           name: 'Figma',
           logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
           description: 'Design collaboration and UI mockups.'
+        },
+        {
+          name: 'TestRail',
+          logo: 'https://upload.wikimedia.org/wikipedia/en/6/61/TestRail_logo.png',
+          description: 'Managed test cases and reporting.'
+        },
+        {
+          name: 'qTest',
+          logo: 'https://upload.wikimedia.org/wikipedia/en/d/d8/QTest_logo.png',
+          description: 'Tracked QA progress in enterprise projects.'
         }
       ]
     }

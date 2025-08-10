@@ -1,7 +1,6 @@
 <section class="skills-section">
   <h2 class="skills-title">Core Automation Skills</h2>
   <div *ngFor="let section of skillSections" class="skills-category">
-    <h3 class="category-title" *ngIf="section.title">{{ section.title }}</h3>
     <div class="skills-grid">
       <div
         *ngFor="let skill of section.skills"

@@ -8,13 +8,6 @@
 .skills-category {
   margin-bottom: 1rem;
 }
-.category-title {
-  font-size: 1rem;
-  font-weight: 600;
-  margin: 0 0 0.5rem;
-  color: var(--text);
-  text-align: left;
-}
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));

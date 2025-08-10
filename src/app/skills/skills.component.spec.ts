@@ -15,11 +15,6 @@ describe('SkillsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should render a heading for each skill section', () => {
-    const headings = fixture.nativeElement.querySelectorAll('.category-title');
-    expect(headings.length).toBe(component.skillSections.length);
-  });
-
   it('should render a card for each skill', () => {
     const cards = fixture.nativeElement.querySelectorAll('.skill-card');
     const totalSkills = component.skillSections.reduce((sum, s) => sum + s.skills.length, 0);
