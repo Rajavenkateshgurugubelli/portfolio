@@ -4,19 +4,14 @@
     <div
       *ngFor="let skill of skills"
       class="skill-card"
-      (click)="selectSkill(skill)"
-      [class.selected]="selectedSkill?.name === skill.name"
       tabindex="0"
-      role="button"
       aria-label="{{skill.name}}"
     >
       <img [src]="skill.logo" [alt]="skill.name + ' logo'" />
       <span class="skill-label">{{ skill.name }}</span>
-
-      <div *ngIf="selectedSkill?.name === skill.name" class="skill-tooltip card">
+      <div class="skill-tooltip card">
         <h3>{{ skill.name }}</h3>
         <p>{{ skill.description }}</p>
-        <button (click)="selectedSkill = null" class="close-btn" aria-label="Close">Close</button>
       </div>
     </div>
   </div>

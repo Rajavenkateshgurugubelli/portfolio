@@ -142,10 +142,4 @@ export class SkillsComponent {
       description: 'Designed and executed automated UI tests using Vue.js components.'
     }
   ];
-
-  selectedSkill: Skill | null = null;
-
-  selectSkill(skill: Skill) {
-    this.selectedSkill = this.selectedSkill?.name === skill.name ? null : skill;
-  }
 }
