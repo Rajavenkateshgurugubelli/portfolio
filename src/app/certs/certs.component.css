@@ -12,8 +12,11 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  color: var(--text);
+  color: var(--bg1);
   text-decoration: none;
+  background: #fff8e1;
+  border: 2px solid #d4af37;
+  border-radius: 12px;
 }
 
 .cert-icon {
