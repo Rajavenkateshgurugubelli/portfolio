@@ -1,14 +1,12 @@
-<header>
-  <nav class="nav">
-    <a class="brand" routerLink="/"><span class="dot"></span> RVG</a>
-    <div class="nav-links">
-      <a routerLink="/" fragment="top">Home</a>
-      <a routerLink="/" fragment="skills">Skills</a>
-      <a routerLink="/" fragment="experience">Experience</a>
-      <a routerLink="/" fragment="education">Education</a>
-      <a routerLink="/" fragment="certs">Certifications</a>
-      <a routerLink="/" fragment="contact">Contact</a>
-    </div>
+<header class="nav">
+  <a class="brand" routerLink="/" fragment="top"><span class="dot"></span> RVG</a>
+  <nav class="nav-links">
+    <a routerLink="/" fragment="top">Home</a>
+    <a routerLink="/" fragment="skills">Skills</a>
+    <a routerLink="/" fragment="experience">Experience</a>
+    <a routerLink="/" fragment="education">Education</a>
+    <a routerLink="/" fragment="certs">Certifications</a>
+    <a routerLink="/" fragment="contact">Contact</a>
   </nav>
 </header>
 
@@ -16,6 +14,10 @@
   <router-outlet></router-outlet>
 </main>
 
-  <footer>
-    © {{ currentYear }} Raja Venkatesh Gurugubelli — crafted with tests & coffee
-  </footer>
+<footer>
+  <p>© {{ currentYear }} Raja Venkatesh Gurugubelli — crafted with tests & coffee ☕</p>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/raja-ven" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:rajagurugu18@gmail.com">Email</a>
+  </div>
+</footer>

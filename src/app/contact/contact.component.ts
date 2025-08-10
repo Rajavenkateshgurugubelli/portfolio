@@ -3,23 +3,31 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-contact',
   standalone: true,
+  styleUrls: ['./contact.component.css'],
   template: `
-  <section class="card">
+  <section class="card contact-card">
     <h2>Contact</h2>
-    <ul class="contact-list">
-      <li>
-        <a href="mailto:rajagurugu18&#64;gmail.com">rajagurugu18&#64;gmail.com</a>
-      </li>
-      <li>
-        <a href="tel:+18068051502">806‑805‑1502</a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/in/raja-ven" target="_blank" rel="noopener">
-          linkedin.com/in/raja-ven
-        </a>
-      </li>
-    </ul>
+    <div class="contact-container">
+      <a class="contact-item" href="mailto:rajagurugu18&#64;gmail.com">
+        <span class="icon">📧</span>
+        <span>rajagurugu18&#64;gmail.com</span>
+      </a>
+      <a class="contact-item" href="tel:+18068051502">
+        <span class="icon">📞</span>
+        <span>806‑805‑1502</span>
+      </a>
+      <a
+        class="contact-item"
+        href="https://www.linkedin.com/in/raja-ven"
+        target="_blank"
+        rel="noopener"
+      >
+        <span class="icon">💼</span>
+        <span>linkedin.com/in/raja-ven</span>
+      </a>
+    </div>
   </section>
-  `
+  `,
 })
 export class ContactComponent {}
+
