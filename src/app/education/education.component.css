@@ -1,7 +1,10 @@
 /* education section styling */
 .education {
   position: relative;
-  margin-left: 24px;
+}
+
+.edu-list {
+  position: relative;
   border-left: 2px solid var(--border);
   padding-left: 24px;
 }
