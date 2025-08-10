@@ -5,9 +5,7 @@
 
 /* section header */
 .xp { margin: 24px 0 8px; }
-.xp-head { margin: 0 0 12px; }
-.xp-head h2 { margin: 0; font-size: 28px; }
-.muted { margin: 4px 0 0; color: var(--muted); }
+.xp h2 { margin: 0 0 12px; font-size: 28px; }
 
 /* list */
 .xp-list {
