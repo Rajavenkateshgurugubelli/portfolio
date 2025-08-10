@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
     <h2>Contact</h2>
     <ul class="contact-list">
       <li>
-        <a href="mailto:rajagurugu18@gmail.com">rajagurugu18@gmail.com</a>
+        <a href="mailto:rajagurugu18&#64;gmail.com">rajagurugu18&#64;gmail.com</a>
       </li>
       <li>
         <a href="tel:+18068051502">806‑805‑1502</a>
