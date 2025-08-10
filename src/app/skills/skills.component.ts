@@ -122,7 +122,7 @@ export class SkillsComponent {
       description: 'Used for Python-based automation and validation of backend services.'
     },
     {
-      name: 'RestAssured',
+      name: 'REST Assured',
       logo: 'https://avatars.githubusercontent.com/u/19369327?s=200&v=4',
       description: 'Automated REST API validation for microservices and distributed workflows.'
     },
