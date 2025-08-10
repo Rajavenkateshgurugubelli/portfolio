@@ -1,4 +1,9 @@
 /* grid layout for certificate cards */
+.certs-title {
+  margin: 0 0 12px;
+  font-size: 28px;
+  color: var(--acc1);
+}
 .cert-grid {
   list-style: none;
   padding: 0;
