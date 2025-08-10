@@ -5,17 +5,17 @@ ul, li {
   list-style: none;
 }
 :root {
-  --bg1: #0b1220;
-  --bg2: #1e293b;
-  --card: rgba(16, 24, 40, 0.85);
-  --glass: rgba(30, 41, 59, 0.7);
-  --text: #e6edf7;
-  --muted: #97a4b8;
-  --border: #334155;
-  --pill: rgba(19, 32, 55, 0.8);
-  --acc1: #38bdf8;
-  --acc2: #a78bfa;
-  --acc3: #f472b6;
+  --bg1: #f8fafc;
+  --bg2: #e2e8f0;
+  --card: rgba(255, 255, 255, 0.85);
+  --glass: rgba(255, 255, 255, 0.7);
+  --text: #1e293b;
+  --muted: #475569;
+  --border: #cbd5e1;
+  --pill: rgba(226, 232, 240, 0.8);
+  --acc1: #2563eb;
+  --acc2: #9333ea;
+  --acc3: #f59e0b;
   --nav-underline: linear-gradient(90deg, var(--acc1), var(--acc2), var(--acc3));
 }
 * { box-sizing: border-box }
@@ -34,8 +34,8 @@ body::before {
   position: fixed;
   z-index: -1;
   top: -100px; left: -100px; right: -100px; bottom: -100px;
-  background: radial-gradient(circle at 20% 30%, #38bdf8 0%, transparent 60%),
-              radial-gradient(circle at 80% 70%, #a78bfa 0%, transparent 60%);
+  background: radial-gradient(circle at 20% 30%, var(--acc1) 0%, transparent 60%),
+              radial-gradient(circle at 80% 70%, var(--acc2) 0%, transparent 60%);
   opacity: 0.18;
   animation: bgmove 16s linear infinite alternate;
 }
@@ -43,14 +43,14 @@ body::before {
   0% { background-position: 20% 30%, 80% 70%; }
   100% { background-position: 30% 40%, 70% 60%; }
 }
-a { color: #8ab4f8; text-decoration: none; transition: color .2s }
+a { color: var(--acc1); text-decoration: none; transition: color .2s }
 a:hover { color: var(--acc2) }
 header {
   position: sticky; top: 0; z-index: 10;
   background: var(--glass);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(12px);
-  box-shadow: 0 2px 16px rgba(30,41,59,0.08);
+  box-shadow: 0 2px 16px rgba(203,213,225,0.5);
   transition: background .4s;
 }
 .nav {
@@ -70,7 +70,7 @@ header {
   font-size: 1.18rem;
   letter-spacing: 0.02em;
   color: var(--acc1);
-  text-shadow: 0 2px 12px #0b1220;
+  text-shadow: 0 2px 12px #e2e8f0;
   margin-left: 0;
 }
 .brand .dot {
@@ -126,7 +126,7 @@ main {
   border: 1px solid var(--border);
   border-radius: 18px;
   padding: 22px;
-  box-shadow: 0 4px 32px rgba(30,41,59,0.10);
+  box-shadow: 0 4px 32px rgba(203,213,225,0.6);
   transition: box-shadow .3s, transform .3s;
   backdrop-filter: blur(4px);
 }
@@ -140,7 +140,7 @@ h1 {
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--acc2);
-  text-shadow: 0 2px 24px #0b1220;
+  text-shadow: 0 2px 24px #cbd5e1;
   animation: fadein 1.4s;
 }
 @keyframes fadein {
@@ -170,14 +170,14 @@ h1 {
   width: 80px;
   padding: 10px 0;
   border-radius: 12px;
-  background: rgba(30,41,59,0.45);
-  box-shadow: 0 2px 12px rgba(56,189,248,0.08);
+  background: rgba(226,232,240,0.45);
+  box-shadow: 0 2px 12px rgba(203,213,225,0.5);
   transition: transform .2s, box-shadow .2s;
 }
 .skill-icon:hover {
   transform: scale(1.08);
-  box-shadow: 0 6px 24px rgba(56,189,248,0.18);
-  background: rgba(56,189,248,0.12);
+  box-shadow: 0 6px 24px rgba(203,213,225,0.7);
+  background: rgba(203,213,225,0.3);
 }
 .skill-icon img {
   width: 38px;
@@ -240,7 +240,7 @@ footer {
   backdrop-filter: blur(8px);
   font-size: 1.08rem;
   letter-spacing: 0.01em;
-  box-shadow: 0 -2px 16px rgba(30,41,59,0.08);
+  box-shadow: 0 -2px 16px rgba(203,213,225,0.5);
 }
 ::-webkit-scrollbar {
   width: 8px;
