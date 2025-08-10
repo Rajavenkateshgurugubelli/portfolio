@@ -38,7 +38,7 @@ export class SkillsComponent {
     },
     {
       name: 'JMeter',
-      logo: 'https://cdn.simpleicons.org/tricentis/0078D7',
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jmeter/jmeter-original.svg',
       description: 'Developed performance, load, and stress testing scenarios to uncover bottlenecks and improve scalability.'
     },
     {
