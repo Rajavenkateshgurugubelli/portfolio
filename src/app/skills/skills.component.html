@@ -1,5 +1,5 @@
-<section>
-  <h2 class="skills-title">QA Automation Skills</h2>
+<section class="skills-section">
+  <h2 class="skills-title">Core Automation Skills</h2>
   <div class="skills-grid">
     <div
       *ngFor="let skill of skills"
@@ -13,10 +13,10 @@
       <img [src]="skill.logo" [alt]="skill.name + ' logo'" />
       <span class="skill-label">{{ skill.name }}</span>
     </div>
-  </div>
-  <div *ngIf="selectedSkill" class="skill-detail card">
-    <h3>{{ selectedSkill.name }}</h3>
-    <p>{{ selectedSkill.description }}</p>
-    <button (click)="selectedSkill = null" class="close-btn">Close</button>
-  </div>
-</section>
+    </div>
+    <div *ngIf="selectedSkill" class="skill-detail card" aria-live="polite">
+      <h3>{{ selectedSkill.name }}</h3>
+      <p>{{ selectedSkill.description }}</p>
+      <button (click)="selectedSkill = null" class="close-btn">Close</button>
+    </div>
+  </section>

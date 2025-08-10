@@ -1,42 +1,40 @@
 /* education section styling */
+.education {
+  position: relative;
+  margin-left: 24px;
+  border-left: 2px solid var(--border);
+  padding-left: 24px;
+}
+
 .education h2 {
   margin-bottom: 16px;
+  color: var(--acc1);
 }
 
 /* card layout */
 .edu-card {
   position: relative;
-  padding: 32px 24px 24px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
   margin-bottom: 18px;
 }
 
 .edu-card::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  border-radius: 18px 18px 0 0;
-  background: linear-gradient(90deg, var(--acc1), var(--acc2));
+  left: -33px;
+  top: 24px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--acc2);
+  box-shadow: 0 0 0 2px var(--bg1);
 }
 
 /* icon badge */
-.edu-icon {
-  position: absolute;
-  top: -20px;
-  left: 24px;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: rgba(56, 189, 248, 0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.4rem;
-  color: var(--acc1);
-  box-shadow: 0 2px 12px rgba(56, 189, 248, 0.25);
-}
+.edu-icon { display: none; }
 
 /* header lines */
 .edu-top {
@@ -81,6 +79,6 @@
   width: 10px;
   height: 10px;
   border-radius: 3px;
-  background: linear-gradient(90deg, var(--acc1), var(--acc2));
+  background: var(--acc1);
 }
 

@@ -17,13 +17,15 @@
   gap: 12px;
   padding: 10px 14px;
   border-radius: 10px;
-  background: var(--pill);
-  transition: background 0.2s, transform 0.2s;
+  background: var(--card);
+  border: 1px solid var(--border);
+  transition: background 0.2s, transform 0.2s, color 0.2s;
   color: var(--text);
 }
 
 .contact-item:hover {
-  background: var(--acc2);
+  background: var(--acc1);
+  color: #0f172a;
   transform: translateY(-2px);
 }
 
