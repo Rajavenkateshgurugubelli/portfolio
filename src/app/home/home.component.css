@@ -1,16 +1,39 @@
 .hero-section {
   text-align: center;
-  padding: 120px 20px 60px;
+  padding: 160px 20px 80px;
 }
 
 .main-title {
   margin: 0;
   font-size: 3rem;
+  color: var(--acc1);
 }
 
 .subtitle {
-  margin-top: 0;
-  color: var(--acc2);
+  margin-top: 8px;
+  color: var(--text);
   font-size: 1.5rem;
+}
+
+.hero-tag {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.hero-cta {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 10px 24px;
+  border-radius: 8px;
+  background: var(--acc1);
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background .2s;
+}
+
+.hero-cta:hover {
+  background: var(--acc2);
 }
 
