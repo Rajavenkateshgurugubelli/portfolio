@@ -1,36 +1,67 @@
-.section-title {
-  color: var(--acc1);
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin-bottom: 1em;
+:root{
+  --bg:#0b1220; --card:#0f172a; --line:#1e2a44;
+  --text:#e6edf7; --muted:#9aa7bd; --accent1:#7dd3fc; --accent2:#a78bfa;
 }
-.exp-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
+
+/* section header */
+.xp { margin: 24px 0 8px; }
+.xp-head { margin: 0 0 12px; }
+.xp-head h2 { margin: 0; font-size: 28px; }
+.muted { margin: 4px 0 0; color: var(--muted); }
+
+/* list */
+.xp-list {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; gap: 14px;
 }
-.exp-card {
-  background: #1e293b;
-  border-radius: 14px;
-  color: #e6edf7;
-  padding: 18px;
-  box-shadow: 0 2px 12px rgba(56,189,248,0.08);
+@media (min-width: 1024px){
+  .xp-list { grid-template-columns: 1fr; }
 }
-.exp-date {
-  color: #97a4b8;
-  font-size: 0.98rem;
-  font-weight: 400;
-  margin-left: 1em;
+
+/* card */
+.xp-card{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px;
+  transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
 }
-.exp-role {
-  font-weight: 600;
-  color: var(--acc2);
-  margin-bottom: 0.5em;
+.xp-card:hover{
+  transform: translateY(-2px);
+  border-color: #2b3b63;
+  box-shadow: 0 12px 24px rgba(0,0,0,.25);
 }
-.exp-card ul {
-  margin: 0.5em 0 0 1em;
-  padding: 0;
+
+/* top line */
+.xp-top{ display: grid; gap: 4px; margin-bottom: 6px; }
+.xp-title{ margin: 0; font-size: 20px; line-height: 1.25; }
+.xp-meta{ display: flex; flex-wrap: wrap; gap: 8px; align-items: center; color: var(--muted); font-size: 14px; }
+.xp-company{ font-weight: 700; position: relative; padding-left: 0.2em; }
+.xp-company::before{ content: '@ '; opacity: .85; } /* avoids escaping @ in template */
+.xp-dot{ opacity: .5; }
+
+/* summary */
+.xp-summary{ margin: 6px 0 8px; color: #cfe2ff; }
+
+/* bullets */
+.xp-bullets{
+  list-style: none; margin: 0 0 10px; padding: 0;
+  display: grid; gap: 8px;
 }
-.exp-card li {
-  margin-bottom: 0.4em;
+.xp-bullets li{ display: grid; grid-template-columns: 16px 1fr; gap: 8px; }
+.tick{
+  margin-top: .35em; width: 10px; height: 10px; border-radius: 3px;
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+}
+
+/* stack chips */
+.xp-stack{ display: flex; flex-wrap: wrap; gap: 8px; }
+.chip{
+  background: #132037;
+  border: 1px solid var(--line);
+  color: #cfe2ff;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 12px;
+  white-space: nowrap;
 }

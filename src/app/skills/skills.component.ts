@@ -108,7 +108,7 @@ export class SkillsComponent {
     },
     {
       name: 'TestNG',
-      logo: 'https://www.vectorlogo.zone/logos/testng/testng-icon.svg',
+      logo: 'data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 width=%2764%27 height=%2764%27 viewBox=%270 0 64 64%27><rect width=%2764%27 height=%2764%27 rx=%2712%27 fill=%27%23FF6C37%27/><text x=%2750%25%27 y=%2752%25%27 text-anchor=%27middle%27 font-family=%27Arial, Helvetica, sans-serif%27 font-weight=%27700%27 font-size=%2718%27 fill=%27%23fff%27>TestNG</text></svg>',
       description: 'Designed custom automation frameworks using TestNG, improving regression test coverage.'
     },
     {

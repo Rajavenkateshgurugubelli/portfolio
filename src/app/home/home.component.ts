@@ -17,6 +17,7 @@ import { ContactComponent } from '../contact/contact.component';
     CertsComponent,
     ContactComponent
   ],
-  templateUrl: './home.component.html'
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css'] 
 })
 export class HomeComponent {}

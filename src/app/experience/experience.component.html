@@ -1,15 +1,33 @@
-<section>
-  <h2 class="section-title">Experience</h2>
-  <div class="exp-grid">
-    <div class="exp-card">
-      <h3>TCGplayer <span class="exp-date">Jul 2023 – Present</span></h3>
-      <div class="exp-role">Software Developer in Test</div>
-      <ul>
-        <li>Designed and implemented automation frameworks in Java and Python for backend microservices.</li>
-        <li>Automated cross-browser and API tests for customer-facing web apps.</li>
-        <li>Integrated CI/CD pipelines for continuous testing.</li>
+<section id="experience" class="xp">
+  <header class="xp-head">
+    <h2>Experience</h2>
+    <p class="muted">Concise responsibilities, clear scope, relevant tech.</p>
+  </header>
+
+  <ol class="xp-list">
+    <li class="xp-card" *ngFor="let r of roles">
+      <div class="xp-top">
+        <h3 class="xp-title">{{ r.title }}</h3>
+        <div class="xp-meta">
+          <span class="xp-company">{{ r.company }}</span>
+          <span class="xp-dot">•</span>
+          <span class="xp-period">{{ r.period }}</span>
+          <span class="xp-dot" *ngIf="r.domain">•</span>
+          <span class="xp-domain" *ngIf="r.domain">{{ r.domain }}</span>
+        </div>
+      </div>
+
+      <p class="xp-summary">{{ r.summary }}</p>
+
+      <ul class="xp-bullets">
+        <li *ngFor="let b of r.bullets">
+          <span class="tick" aria-hidden="true"></span>{{ b }}
+        </li>
       </ul>
-    </div>
-    <!-- Add more exp-card blocks for other jobs -->
-  </div>
+
+      <div class="xp-stack">
+        <span class="chip" *ngFor="let s of r.stack">{{ s.label }}</span>
+      </div>
+    </li>
+  </ol>
 </section>
