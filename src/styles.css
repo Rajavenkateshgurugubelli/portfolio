@@ -5,17 +5,17 @@ ul, li {
   list-style: none;
 }
 :root {
-  --bg1: #0b1220;
-  --bg2: #1e293b;
-  --card: rgba(16, 24, 40, 0.85);
-  --glass: rgba(30, 41, 59, 0.7);
-  --text: #e6edf7;
-  --muted: #97a4b8;
-  --border: #334155;
-  --pill: rgba(19, 32, 55, 0.8);
-  --acc1: #38bdf8;
-  --acc2: #a78bfa;
-  --acc3: #f472b6;
+  --bg1: #0d1117;
+  --bg2: #161b22;
+  --card: rgba(33, 38, 45, 0.85);
+  --glass: rgba(33, 38, 45, 0.7);
+  --text: #c9d1d9;
+  --muted: #8b949e;
+  --border: #30363d;
+  --pill: rgba(48, 54, 61, 0.8);
+  --acc1: #58a6ff;
+  --acc2: #d2a8ff;
+  --acc3: #56d364;
   --nav-underline: linear-gradient(90deg, var(--acc1), var(--acc2), var(--acc3));
 }
 * { box-sizing: border-box }
@@ -34,8 +34,8 @@ body::before {
   position: fixed;
   z-index: -1;
   top: -100px; left: -100px; right: -100px; bottom: -100px;
-  background: radial-gradient(circle at 20% 30%, #38bdf8 0%, transparent 60%),
-              radial-gradient(circle at 80% 70%, #a78bfa 0%, transparent 60%);
+  background: radial-gradient(circle at 20% 30%, var(--acc1) 0%, transparent 60%),
+              radial-gradient(circle at 80% 70%, var(--acc2) 0%, transparent 60%);
   opacity: 0.18;
   animation: bgmove 16s linear infinite alternate;
 }
@@ -43,7 +43,7 @@ body::before {
   0% { background-position: 20% 30%, 80% 70%; }
   100% { background-position: 30% 40%, 70% 60%; }
 }
-a { color: #8ab4f8; text-decoration: none; transition: color .2s }
+a { color: var(--acc1); text-decoration: none; transition: color .2s }
 a:hover { color: var(--acc2) }
 header.nav {
   position: fixed;
@@ -54,7 +54,7 @@ header.nav {
   background: var(--glass);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(12px);
-  box-shadow: 0 2px 16px rgba(30,41,59,0.08);
+  box-shadow: 0 2px 16px color-mix(in srgb, var(--bg2) 8%, transparent);
   transition: background .4s;
 }
 .nav {
@@ -74,7 +74,7 @@ header.nav {
   font-size: 1.18rem;
   letter-spacing: 0.02em;
   color: var(--acc1);
-  text-shadow: 0 2px 12px #0b1220;
+  text-shadow: 0 2px 12px var(--bg1);
   margin-left: 0;
 }
 .brand .dot {
@@ -130,13 +130,14 @@ main {
   border: 1px solid var(--border);
   border-radius: 18px;
   padding: 22px;
-  box-shadow: 0 4px 32px rgba(30,41,59,0.10);
+  box-shadow: 0 4px 32px color-mix(in srgb, var(--bg2) 10%, transparent);
   transition: box-shadow .3s, transform .3s;
   backdrop-filter: blur(4px);
 }
 .card.rise:hover {
   transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 12px 32px rgba(56,189,248,0.12), 0 2px 24px rgba(167,139,250,0.10);
+  box-shadow: 0 12px 32px color-mix(in srgb, var(--acc1) 12%, transparent),
+              0 2px 24px color-mix(in srgb, var(--acc2) 10%, transparent);
 }
 h1 {
   font-size: 44px;
@@ -144,7 +145,7 @@ h1 {
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--acc2);
-  text-shadow: 0 2px 24px #0b1220;
+  text-shadow: 0 2px 24px var(--bg1);
   animation: fadein 1.4s;
 }
 @keyframes fadein {
@@ -174,21 +175,21 @@ h1 {
   width: 80px;
   padding: 10px 0;
   border-radius: 12px;
-  background: rgba(30,41,59,0.45);
-  box-shadow: 0 2px 12px rgba(56,189,248,0.08);
+  background: color-mix(in srgb, var(--bg2) 45%, transparent);
+  box-shadow: 0 2px 12px color-mix(in srgb, var(--acc1) 8%, transparent);
   transition: transform .2s, box-shadow .2s;
 }
 .skill-icon:hover {
   transform: scale(1.08);
-  box-shadow: 0 6px 24px rgba(56,189,248,0.18);
-  background: rgba(56,189,248,0.12);
+  box-shadow: 0 6px 24px color-mix(in srgb, var(--acc1) 18%, transparent);
+  background: color-mix(in srgb, var(--acc1) 12%, transparent);
 }
 .skill-icon img {
   width: 38px;
   height: 38px;
   object-fit: contain;
   margin-bottom: 7px;
-  filter: drop-shadow(0 2px 8px #33415544);
+  filter: drop-shadow(0 2px 8px color-mix(in srgb, var(--border) 27%, transparent));
 }
 .skill-label {
   font-size: 0.98rem;
@@ -212,7 +213,7 @@ h1 {
   font-size: 0.98rem;
   color: var(--acc2);
   margin-right: 6px;
-  box-shadow: 0 2px 8px rgba(56,189,248,0.08);
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--acc1) 8%, transparent);
   transition: background .2s, color .2s;
 }
 .pill:hover {
@@ -244,7 +245,7 @@ footer {
   backdrop-filter: blur(8px);
   font-size: 1.08rem;
   letter-spacing: 0.01em;
-  box-shadow: 0 -2px 16px rgba(30,41,59,0.08);
+  box-shadow: 0 -2px 16px color-mix(in srgb, var(--bg2) 8%, transparent);
 }
 
 .footer-links {

@@ -1,17 +1,86 @@
-.card {
+/* education section styling */
+.education h2 {
+  margin-bottom: 16px;
+}
+
+/* card layout */
+.edu-card {
+  position: relative;
+  padding: 32px 24px 24px;
   margin-bottom: 18px;
-  padding: 18px;
-  background: var(--card);
-  border-radius: 12px;
-  color: var(--text);
 }
 
-.muted {
+.edu-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 18px 18px 0 0;
+  background: linear-gradient(90deg, var(--acc1), var(--acc2));
+}
+
+/* icon badge */
+  .edu-icon {
+    position: absolute;
+    top: -20px;
+    left: 24px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--acc1) 15%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: var(--acc1);
+    box-shadow: 0 2px 12px color-mix(in srgb, var(--acc1) 25%, transparent);
+  }
+
+/* header lines */
+.edu-top {
+  margin-bottom: 8px;
+}
+
+.edu-top h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.edu-meta {
+  margin: 2px 0 0;
   color: var(--muted);
-  font-size: 0.98rem;
+  font-size: 0.92rem;
 }
 
-.edu-bullets {
-  margin: 12px 0 0;
-  padding-left: 18px;
+.edu-degree {
+  margin: 8px 0;
+  line-height: 1.4;
 }
+
+/* bullet list */
+.edu-bullets {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.edu-bullets li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.edu-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--acc1), var(--acc2));
+}
+

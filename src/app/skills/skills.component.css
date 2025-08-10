@@ -1,10 +1,11 @@
 .skills-title {
-  color: var(--acc1, #8ab4f8);
+  color: var(--acc1);
   font-size: 1.6rem;
   font-weight: 700;
   margin-bottom: 1em;
   text-align: left;
 }
+
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -12,6 +13,7 @@
   margin-bottom: 24px;
   justify-content: flex-start;
 }
+
 .skill-card {
   display: flex;
   flex-direction: column;
@@ -19,55 +21,62 @@
   width: 90px;
   padding: 14px 0;
   border-radius: 14px;
-  background: rgba(30,41,59,0.45);
-  box-shadow: 0 2px 12px rgba(56,189,248,0.08);
+  background: color-mix(in srgb, var(--bg2) 45%, transparent);
+  box-shadow: 0 2px 12px color-mix(in srgb, var(--acc1) 8%, transparent);
   cursor: pointer;
   transition: transform .2s, box-shadow .2s, background .2s;
   border: 2px solid transparent;
 }
+
 .skill-card.selected,
 .skill-card:hover,
 .skill-card:focus {
   transform: scale(1.08);
-  box-shadow: 0 6px 24px rgba(56,189,248,0.18);
-  background: rgba(56,189,248,0.12);
-  border-color: var(--acc1, #8ab4f8);
+  box-shadow: 0 6px 24px color-mix(in srgb, var(--acc1) 18%, transparent);
+  background: color-mix(in srgb, var(--acc1) 12%, transparent);
+  border-color: var(--acc1);
 }
+
 .skill-card img {
   width: 44px;
   height: 44px;
   object-fit: contain;
   margin-bottom: 8px;
-  filter: drop-shadow(0 2px 8px #33415544);
+  filter: drop-shadow(0 2px 8px color-mix(in srgb, var(--border) 27%, transparent));
 }
+
 .skill-label {
   font-size: 1rem;
-  color: var(--acc2, #334155);
+  color: var(--acc2);
   font-weight: 500;
   text-align: center;
   margin-top: 2px;
   letter-spacing: 0.01em;
 }
+
 .skill-detail.card {
   margin-top: 12px;
   padding: 18px;
-  background: #1e293b;
+  background: var(--card);
   border-radius: 14px;
-  color: #e6edf7;
-  box-shadow: 0 2px 12px rgba(56,189,248,0.08);
+  color: var(--text);
+  box-shadow: 0 2px 12px color-mix(in srgb, var(--acc1) 8%, transparent);
   max-width: 400px;
 }
+
 .close-btn {
   margin-top: 12px;
   padding: 6px 16px;
   border-radius: 8px;
-  background: var(--acc1, #8ab4f8);
+  background: var(--acc1);
   color: #fff;
   border: none;
   cursor: pointer;
   font-weight: 500;
   transition: background .2s;
 }
+
 .close-btn:hover {
-  background: var(--acc2, #334155);
+  background: var(--acc2);
 }
+

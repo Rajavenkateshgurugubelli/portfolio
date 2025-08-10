@@ -1,3 +1,4 @@
+/* grid layout for certificate cards */
 .cert-grid {
   list-style: none;
   padding: 0;
@@ -7,22 +8,50 @@
   gap: 20px;
 }
 
+/* card styling */
 .cert-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   color: var(--text);
   text-decoration: none;
+  padding: 32px 20px 20px;
 }
 
-.cert-icon {
-  font-size: 2.4rem;
-  margin-bottom: 12px;
+.cert-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 18px 18px 0 0;
+  background: linear-gradient(90deg, var(--acc1), var(--acc2));
 }
+
+/* icon badge */
+  .cert-icon {
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--acc1) 15%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: var(--acc1);
+    box-shadow: 0 2px 12px color-mix(in srgb, var(--acc1) 25%, transparent);
+  }
 
 .cert-title {
   font-weight: 600;
   line-height: 1.4;
+  margin-top: 8px;
 }
 
