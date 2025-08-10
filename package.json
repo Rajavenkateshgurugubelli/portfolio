@@ -5,7 +5,8 @@
   "scripts": {
     "start": "ng serve --open",
     "build": "ng build --configuration=production",
-    "dev": "ng serve --configuration=development"
+    "dev": "ng serve --configuration=development",
+    "test": "node tests/basic.test.js"
   },
   "dependencies": {
     "@angular/animations": "^18.2.0",
