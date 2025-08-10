@@ -1,6 +1,6 @@
 <h2 class="contact-title">Contact</h2>
   <section class="card contact-card">
-    <div class="contact-container">
+    <div class="contact-container" *ngIf="!showForm">
       <a class="contact-item" href="mailto:rajagurugu18&#64;gmail.com">
         <span class="icon">📧</span>
         <span>rajagurugu18&#64;gmail.com</span>
@@ -19,4 +19,10 @@
         <span>linkedin.com/in/raja-ven</span>
       </a>
     </div>
+    <form *ngIf="showForm" class="contact-form" (ngSubmit)="sendEmail()">
+      <input type="text" name="name" [(ngModel)]="formData.name" placeholder="Your Name" required />
+      <input type="email" name="email" [(ngModel)]="formData.email" placeholder="Your Email" required />
+      <textarea name="message" [(ngModel)]="formData.message" placeholder="Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
   </section>
