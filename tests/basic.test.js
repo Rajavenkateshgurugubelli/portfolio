@@ -7,8 +7,8 @@ assert(homeHtml.includes('Raja Venkatesh Gurugubelli'), 'Hero title should exist
 assert(homeHtml.includes('QA Automation Engineer'), 'Subtitle should exist');
 
 const appHtml = fs.readFileSync(path.join(__dirname, '../src/app/app.component.html'), 'utf-8');
-['skills', 'experience', 'education', 'certs', 'contact'].forEach(anchor => {
-  assert(appHtml.includes(`fragment="${anchor}"`), `Nav should link to #${anchor}`);
+['top', 'skills', 'experience', 'education', 'certs', 'contact'].forEach(anchor => {
+  assert(appHtml.includes(`href="#${anchor}"`), `Nav should link to #${anchor}`);
 });
 
 console.log('All basic tests passed');

@@ -2,3 +2,19 @@
   display: flex;
   align-items: center;
 }
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.social-links .icon {
+  font-size: 1.6rem;
+  transition: transform .2s;
+}
+
+.social-links .icon:hover {
+  transform: scale(1.2);
+}
