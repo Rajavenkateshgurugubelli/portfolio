@@ -12,11 +12,16 @@
     >
       <img [src]="skill.logo" [alt]="skill.name + ' logo'" />
       <span class="skill-label">{{ skill.name }}</span>
+      <div
+        *ngIf="selectedSkill?.name === skill.name"
+        class="skill-tooltip card"
+        aria-live="polite"
+        (click)="$event.stopPropagation()"
+      >
+        <h3>{{ skill.name }}</h3>
+        <p>{{ skill.description }}</p>
+        <button (click)="closeSkill($event)" class="close-btn">Close</button>
+      </div>
     </div>
-    </div>
-    <div *ngIf="selectedSkill" class="skill-detail card" aria-live="polite">
-      <h3>{{ selectedSkill.name }}</h3>
-      <p>{{ selectedSkill.description }}</p>
-      <button (click)="selectedSkill = null" class="close-btn">Close</button>
-    </div>
-  </section>
+  </div>
+</section>

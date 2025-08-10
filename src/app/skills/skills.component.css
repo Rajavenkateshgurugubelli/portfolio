@@ -13,16 +13,17 @@
   justify-items: center;
 }
 .skill-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 90px;
-  padding: 14px 0;
-  border-radius: 12px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  cursor: pointer;
-  transition: transform .2s, box-shadow .2s, background .2s, border-color .2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90px;
+    padding: 14px 0;
+    border-radius: 12px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: transform .2s, box-shadow .2s, background .2s, border-color .2s;
+    position: relative;
 }
 .skill-card.selected,
 .skill-card:hover,
@@ -48,16 +49,20 @@
   margin-top: 2px;
   letter-spacing: 0.01em;
 }
-.skill-detail.card {
-  margin-top: 12px;
-  padding: 18px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  color: var(--text);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
-  max-width: 400px;
-}
+.skill-tooltip {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -110%);
+    width: 220px;
+    padding: 12px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: var(--text);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    z-index: 10;
+  }
 .close-btn {
   margin-top: 12px;
   padding: 6px 16px;
