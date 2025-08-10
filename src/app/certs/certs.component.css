@@ -1,11 +1,28 @@
-
-.cert-list {
+.cert-grid {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
 }
 
-.cert-list li {
-  margin: 6px 0;
+.cert-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.cert-icon {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+}
+
+.cert-title {
+  font-weight: 600;
+  line-height: 1.4;
 }
 
