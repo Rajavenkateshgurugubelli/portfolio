@@ -45,7 +45,7 @@ body::before {
 }
 a { color: #8ab4f8; text-decoration: none; transition: color .2s }
 a:hover { color: var(--acc2) }
-header {
+header.nav {
   position: sticky; top: 0; z-index: 10;
   background: var(--glass);
   border-bottom: 1px solid var(--border);
