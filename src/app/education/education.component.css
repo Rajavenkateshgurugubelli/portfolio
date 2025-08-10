@@ -1,11 +1,17 @@
 .card {
   margin-bottom: 18px;
   padding: 18px;
-  background: #1e293b;
+  background: var(--card);
   border-radius: 12px;
-  color: #e6edf7;
+  color: var(--text);
 }
+
 .muted {
-  color: #97a4b8;
+  color: var(--muted);
   font-size: 0.98rem;
+}
+
+.edu-bullets {
+  margin: 12px 0 0;
+  padding-left: 18px;
 }
