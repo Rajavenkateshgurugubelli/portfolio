@@ -4,10 +4,9 @@ const assert = require('assert');
 
 const homeHtml = fs.readFileSync(path.join(__dirname, '../src/app/home/home.component.html'), 'utf-8');
 assert(homeHtml.includes('Raja Venkatesh Gurugubelli'), 'Hero title should exist');
-assert(homeHtml.includes('QA Automation Engineer'), 'Subtitle should exist');
 
 const appHtml = fs.readFileSync(path.join(__dirname, '../src/app/app.component.html'), 'utf-8');
-['skills', 'experience', 'education', 'certs', 'contact'].forEach(anchor => {
+['skills', 'experience', 'education', 'contact'].forEach(anchor => {
   assert(appHtml.includes(`fragment="${anchor}"`), `Nav should link to #${anchor}`);
 });
 

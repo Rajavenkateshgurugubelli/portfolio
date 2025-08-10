@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { SkillsComponent } from '../skills/skills.component';
 import { ExperienceComponent } from '../experience/experience.component';
 import { EducationComponent } from '../education/education.component';
-import { CertsComponent } from '../certs/certs.component';
 import { ContactComponent } from '../contact/contact.component';
 
 @Component({
@@ -14,7 +13,6 @@ import { ContactComponent } from '../contact/contact.component';
     SkillsComponent,
     ExperienceComponent,
     EducationComponent,
-    CertsComponent,
     ContactComponent
   ],
   templateUrl: './home.component.html',
