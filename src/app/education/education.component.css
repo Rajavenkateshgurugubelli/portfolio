@@ -1,17 +1,24 @@
-.card {
+.grad-card {
   margin-bottom: 18px;
-  padding: 18px;
-  background: var(--card);
-  border-radius: 12px;
-  color: var(--text);
 }
 
-.muted {
-  color: var(--muted);
-  font-size: 0.98rem;
-}
-
-.edu-bullets {
+.grad-bullets {
   margin: 12px 0 0;
   padding-left: 18px;
+}
+
+.graduation h2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.grad-icon {
+  font-size: 2.4rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .grad-card {
+    border-top: 4px solid var(--acc2);
+  }
 }
