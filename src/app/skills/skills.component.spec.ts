@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
 import { SkillsComponent } from './skills.component';
 
 describe('SkillsComponent', () => {
@@ -16,28 +15,15 @@ describe('SkillsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should select skill on card click and render detail section', () => {
-    const cards = fixture.debugElement.queryAll(By.css('.skill-card'));
-    cards[0].nativeElement.click();
-    fixture.detectChanges();
-
-    expect(component.selectedSkill).toEqual(component.skills[0]);
-    const detail = fixture.nativeElement.querySelector('.skill-detail');
-    expect(detail).toBeTruthy();
+  it('should render a heading for each skill section', () => {
+    const headings = fixture.nativeElement.querySelectorAll('.category-title');
+    expect(headings.length).toBe(component.skillSections.length);
   });
 
-  it('should clear selected skill when close button clicked', () => {
-    const cards = fixture.debugElement.queryAll(By.css('.skill-card'));
-    cards[0].nativeElement.click();
-    fixture.detectChanges();
-
-    const closeBtn = fixture.nativeElement.querySelector('.close-btn');
-    closeBtn.click();
-    fixture.detectChanges();
-
-    expect(component.selectedSkill).toBeNull();
-    const detail = fixture.nativeElement.querySelector('.skill-detail');
-    expect(detail).toBeNull();
+  it('should render a card for each skill', () => {
+    const cards = fixture.nativeElement.querySelectorAll('.skill-card');
+    const totalSkills = component.skillSections.reduce((sum, s) => sum + s.skills.length, 0);
+    expect(cards.length).toBe(totalSkills);
   });
 });
 

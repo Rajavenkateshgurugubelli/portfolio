@@ -1,17 +1,20 @@
 <section class="skills-section">
   <h2 class="skills-title">Core Automation Skills</h2>
-  <div class="skills-grid">
-    <div
-      *ngFor="let skill of skills"
-      class="skill-card"
-      tabindex="0"
-      aria-label="{{skill.name}}"
-    >
-      <img [src]="skill.logo" [alt]="skill.name + ' logo'" />
-      <span class="skill-label">{{ skill.name }}</span>
-      <div class="skill-tooltip card">
-        <h3>{{ skill.name }}</h3>
-        <p>{{ skill.description }}</p>
+  <div *ngFor="let section of skillSections" class="skills-category">
+    <h3 class="category-title" *ngIf="section.title">{{ section.title }}</h3>
+    <div class="skills-grid">
+      <div
+        *ngFor="let skill of section.skills"
+        class="skill-card"
+        tabindex="0"
+        aria-label="{{skill.name}}"
+      >
+        <img [src]="skill.logo" [alt]="skill.name + ' logo'" />
+        <span class="skill-label">{{ skill.name }}</span>
+        <div class="skill-tooltip card">
+          <h3>{{ skill.name }}</h3>
+          <p>{{ skill.description }}</p>
+        </div>
       </div>
     </div>
   </div>
