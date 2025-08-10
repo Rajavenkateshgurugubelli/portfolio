@@ -146,6 +146,6 @@ export class SkillsComponent {
   selectedSkill: Skill | null = null;
 
   selectSkill(skill: Skill) {
-    this.selectedSkill = skill;
+    this.selectedSkill = this.selectedSkill?.name === skill.name ? null : skill;
   }
 }
