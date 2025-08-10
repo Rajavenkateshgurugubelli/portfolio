@@ -242,6 +242,13 @@ footer {
   letter-spacing: 0.01em;
   box-shadow: 0 -2px 16px rgba(30,41,59,0.08);
 }
+
+.footer-links {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
 ::-webkit-scrollbar {
   width: 8px;
   background: var(--bg1);
