@@ -59,7 +59,7 @@
 
 @media (max-width: 600px) {
   .edu-card {
-    flexDirection: column;
+    flex-direction: column;
     text-align: center;
   }
 }
