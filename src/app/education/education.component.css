@@ -1,87 +1,65 @@
-/* education section styling */
-.education {
-  position: relative;
+/* Education Component Styles */
+
+.edu-grid {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 
-.edu-list {
-  position: relative;
-  border-left: 2px solid var(--border);
-  padding-left: 24px;
-}
-
-.education h2 {
-  margin-bottom: 16px;
-  color: var(--acc1);
-}
-
-/* card layout */
 .edu-card {
-  position: relative;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 24px;
-  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 600px;
+  width: 100%;
+  padding: 32px;
 }
 
-.edu-card::before {
-  content: "";
-  position: absolute;
-  left: -33px;
-  top: 24px;
-  width: 12px;
-  height: 12px;
+.edu-icon {
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--accent-primary);
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
-  background: var(--acc2);
-  box-shadow: 0 0 0 2px var(--bg1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-/* icon badge */
-.edu-icon { display: none; }
-
-/* header lines */
-.edu-top {
-  margin-bottom: 8px;
+.edu-content {
+  flex-grow: 1;
 }
 
-.edu-top h3 {
-  margin: 0;
-  font-size: 1.2rem;
-}
-
-.edu-meta {
-  margin: 2px 0 0;
-  color: var(--muted);
-  font-size: 0.92rem;
+.edu-school {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 4px;
 }
 
 .edu-degree {
-  margin: 8px 0;
-  line-height: 1.4;
+  font-size: 1.2rem;
+  color: var(--accent-secondary);
+  margin-bottom: 8px;
+  font-weight: 500;
 }
 
-/* bullet list */
-.edu-bullets {
-  list-style: none;
-  margin: 12px 0 0;
-  padding: 0;
-  display: grid;
+.edu-meta {
+  display: flex;
+  align-items: center;
   gap: 8px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
 }
 
-.edu-bullets li {
-  position: relative;
-  padding-left: 20px;
+.dot {
+  color: var(--border-glow);
 }
 
-.edu-bullets li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 6px;
-  width: 10px;
-  height: 10px;
-  border-radius: 3px;
-  background: var(--acc1);
+@media (max-width: 600px) {
+  .edu-card {
+    flexDirection: column;
+    text-align: center;
+  }
 }
-

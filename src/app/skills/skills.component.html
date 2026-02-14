@@ -1,18 +1,16 @@
-<section class="skills-section">
-  <h2 class="skills-title">Core Automation Skills</h2>
+<div class="container">
+  <div class="section-header fade-in">
+    <h2>Technical <span class="text-gradient">Arsenal</span></h2>
+    <p class="section-subtitle">Technologies I use to build scalable solutions.</p>
+  </div>
+
   <div class="skills-grid">
-    <div
-      *ngFor="let skill of skills"
-      class="skill-card"
-      tabindex="0"
-      aria-label="{{skill.name}}"
-    >
-      <img [src]="skill.logo" [alt]="skill.name + ' logo'" />
-      <span class="skill-label">{{ skill.name }}</span>
-      <div class="skill-tooltip card">
-        <h3>{{ skill.name }}</h3>
-        <p>{{ skill.description }}</p>
+    <div *ngFor="let skill of skills" class="skill-card glass-card fade-in" tabindex="0">
+      <div class="skill-icon-wrapper">
+        <img [src]="skill.logo" [alt]="skill.name" class="skill-icon">
       </div>
+      <h3 class="skill-name">{{ skill.name }}</h3>
+      <p class="skill-desc">{{ skill.description }}</p>
     </div>
   </div>
-</section>
+</div>

@@ -1,30 +1,31 @@
-<section id="experience" class="xp">
-  <h2>Experience</h2>
+<div class="container">
+  <div class="section-header fade-in">
+    <h2>Professional <span class="text-gradient">Journey</span></h2>
+    <p class="section-subtitle">Building enterprise-scale solutions across industries.</p>
+  </div>
 
-    <ol class="xp-list">
-      <li class="xp-card card rise" *ngFor="let r of roles">
-        <div class="xp-top">
-        <h3 class="xp-title">{{ r.title }}</h3>
-        <div class="xp-meta">
-          <span class="xp-company">{{ r.company }}</span>
-          <span class="xp-dot">•</span>
-          <span class="xp-period">{{ r.period }}</span>
-          <span class="xp-dot" *ngIf="r.domain">•</span>
-          <span class="xp-domain" *ngIf="r.domain">{{ r.domain }}</span>
+  <div class="timeline">
+    <div *ngFor="let role of roles; let last = last" class="timeline-item fade-in">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content glass-card">
+        <div class="role-header">
+          <div>
+            <h3 class="role-title">{{ role.title }}</h3>
+            <span class="role-company">{{ role.company }}</span>
+          </div>
+          <span class="role-period">{{ role.period }}</span>
+        </div>
+
+        <p class="role-summary">{{ role.summary }}</p>
+
+        <ul class="role-bullets">
+          <li *ngFor="let bullet of role.bullets">{{ bullet }}</li>
+        </ul>
+
+        <div class="role-stack">
+          <span *ngFor="let tech of role.stack" class="tech-tag">{{ tech.label }}</span>
         </div>
       </div>
-
-      <p class="xp-summary">{{ r.summary }}</p>
-
-      <ul class="xp-bullets">
-        <li *ngFor="let b of r.bullets">
-          <span class="tick" aria-hidden="true"></span>{{ b }}
-        </li>
-      </ul>
-
-      <div class="xp-stack">
-        <span class="chip" *ngFor="let s of r.stack">{{ s.label }}</span>
-      </div>
-    </li>
-  </ol>
-</section>
+    </div>
+  </div>
+</div>

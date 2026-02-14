@@ -1,130 +1,149 @@
-/* experience section header */
-.xp {
-  margin: 24px 0 8px;
-}
+/* Experience Component Styles - Timeline */
 
-.xp h2 {
-  margin: 0 0 12px;
-  font-size: 28px;
-  color: var(--acc1);
-}
-
-/* list layout */
-.xp-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.timeline {
   position: relative;
-  border-left: 2px solid var(--border);
-  padding-left: 24px;
-  display: grid;
-  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 0;
 }
 
-/* card layout */
-.xp-card {
-  position: relative;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 24px;
-}
-
-.xp-card::before {
-  content: "";
+.timeline::before {
+  content: '';
   position: absolute;
-  left: -33px;
-  top: 28px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--acc1);
-  box-shadow: 0 0 0 2px var(--bg1);
+  top: 0;
+  left: 20px;
+  height: 100%;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.1);
 }
 
-/* icon badge */
-.xp-icon { display: none; }
-
-/* top line */
-.xp-top {
-  display: grid;
-  gap: 4px;
-  margin-bottom: 6px;
-}
-
-.xp-title {
-  margin: 0;
-  font-size: 20px;
-  line-height: 1.25;
-}
-
-.xp-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  align-items: center;
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.xp-company {
-  font-weight: 700;
+.timeline-item {
   position: relative;
-  padding-left: 0.2em;
+  padding-left: 60px;
+  margin-bottom: 60px;
 }
 
-.xp-company::before {
-  content: '@ ';
-  opacity: 0.85;
+.timeline-item:last-child {
+  margin-bottom: 0;
 }
 
-.xp-dot {
-  opacity: 0.5;
+.timeline-marker {
+  position: absolute;
+  left: 11px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--bg-darker);
+  border: 4px solid var(--accent-primary);
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.2);
+  z-index: 1;
 }
 
-/* summary */
-.xp-summary {
-  margin: 6px 0 8px;
-  color: var(--text);
+.timeline-content {
+  position: relative;
 }
 
-/* bullets */
-.xp-bullets {
-  list-style: none;
-  margin: 0 0 10px;
-  padding: 0;
-  display: grid;
-  gap: 8px;
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 10px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 20px solid rgba(30, 41, 59, 0.7);
 }
 
-.xp-bullets li {
-  display: grid;
-  grid-template-columns: 16px 1fr;
-  gap: 8px;
+.role-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
-.tick {
-  margin-top: 0.35em;
-  width: 10px;
-  height: 10px;
-  border-radius: 3px;
-  background: linear-gradient(90deg, var(--acc1), var(--acc2));
+.role-title {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+  color: var(--text-primary);
 }
 
-/* stack chips */
-.xp-stack {
+.role-company {
+  font-size: 1.1rem;
+  color: var(--text-accent);
+  font-weight: 500;
+}
+
+.role-period {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.role-summary {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.role-bullets {
+  margin-bottom: 24px;
+}
+
+.role-bullets li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 10px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.role-bullets li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--accent-secondary);
+}
+
+.role-stack {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.chip {
-  background: var(--pill);
-  border: 1px solid var(--border);
-  color: var(--text);
-  border-radius: 999px;
-  padding: 6px 10px;
-  font-size: 12px;
-  white-space: nowrap;
+.tech-tag {
+  font-size: 0.85rem;
+  color: var(--text-accent);
+  background: rgba(6, 182, 212, 0.1);
+  padding: 4px 12px;
+  border-radius: 4px;
+  border: 1px solid rgba(6, 182, 212, 0.2);
 }
 
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-item {
+    padding-left: 40px;
+  }
+
+  .timeline-marker {
+    left: 1px;
+  }
+
+  .timeline-content::before {
+    display: none;
+  }
+
+  .role-header {
+    flex-direction: column;
+  }
+}
