@@ -22,57 +22,58 @@ type Role = {
 export class ExperienceComponent {
   roles: Role[] = [
     {
-      company: 'TCGplayer',
-      title: 'Software Developer in Test (SDET)',
+      company: 'Ebay',
+      title: 'Senior Software Engineer',
       period: 'Jul 2023 – Present',
-      domain: 'E-commerce / Marketplace',
-        summary:
-          'Lead UI and API automation for marketplace features with CI visibility.',
-        bullets: [
-          'Built Playwright (TS) and Selenium (Java) frameworks with parallel execution and trace capture.',
-          'Wired Postman and REST Assured checks into CI for smoke and regression suites.',
-          'Verified event flows across Kafka and RabbitMQ for orders, inventory, and payments.',
-          'Created ELK dashboards to expose flakiness and accelerate fixes.'
-        ],
+      domain: 'E-commerce',
+      summary: 'Developing and maintaining RESTful APIs and inventory management systems for the e-commerce platform.',
+      bullets: [
+        'Developed RESTful APIs using Spring Boot and ASP.NET Core for seamless microservices communication.',
+        'Implemented event-driven architecture using Apache Kafka for order updates and inventory synchronization.',
+        'Designed GitOps-based CI/CD pipelines using Argo CD and Terraform for automated infrastructure.',
+        'Optimized Elasticsearch indexes for high-performance search and aggregation.',
+        'Integrated AI-assisted workflows to accelerate feature development and automated testing.',
+        'Improved system performance with Redis and Ehcache caching strategies.'
+      ],
       stack: [
-        { label: 'Playwright' }, { label: 'Selenium' }, { label: 'Java' }, { label: 'TypeScript' },
-        { label: 'Postman' }, { label: 'REST' }, { label: 'Kafka' }, { label: 'RabbitMQ' },
-        { label: 'Azure DevOps' }, { label: 'GitHub Actions' }, { label: 'ELK' }
+        { label: 'Java' }, { label: 'Spring Boot' }, { label: 'ASP.NET Core' }, { label: 'Kafka' },
+        { label: 'Elasticsearch' }, { label: 'Redis' }, { label: 'Kubernetes' }, { label: 'Terraform' }
       ]
     },
     {
-      company: 'Florida Power & Light',
-      title: 'SDET',
+      company: 'Florida Power and Light',
+      title: 'Full Stack Engineer',
       period: 'Sep 2021 – Aug 2022',
-      domain: 'Energy / Customer Portals',
-        summary:
-          'Delivered automation for billing portals and metering APIs.',
-        bullets: [
-          'Authored Selenium/TestNG framework with reusable page objects.',
-          'Implemented Tosca API suites with schema validation for metering and billing.',
-          'Established JMeter load baselines and enforced SLAs in CI.',
-          'Containerized test environments with Docker aligned to QA and stage.'
-        ],
+      domain: 'Energy / Utility',
+      summary: 'Rearchitected and delivered a mission-critical energy utility web application.',
+      bullets: [
+        'Developed backend modules using Spring Boot and Spring Data JPA for billing and user profiles.',
+        'Built dynamic frontend components using Vue.js and TypeScript for energy usage insights.',
+        'Implemented microservices architecture with Spring Cloud for modular deployments.',
+        'Automated deployment using Docker and CI/CD pipelines on AWS EKS.',
+        'Enhanced code quality through TDD using JUnit and Mockito.'
+      ],
       stack: [
-        { label: 'Selenium' }, { label: 'TestNG' }, { label: 'Tosca' }, { label: 'JMeter' },
-        { label: 'Docker' }, { label: 'MySQL' }, { label: 'Spring Boot' }
+        { label: 'Vue.js' }, { label: 'Java' }, { label: 'Spring Boot' }, { label: 'MySQL' },
+        { label: 'AWS EKS' }, { label: 'Docker' }, { label: 'Jenkins' }
       ]
     },
     {
-      company: 'CGI',
-      title: 'Test Engineer',
+      company: 'Comerica Bank',
+      title: 'Software Developer',
       period: 'May 2019 – Aug 2021',
-      domain: 'Enterprise Applications',
-        summary:
-          'Built UI and API automation for internal services with continuous integration.',
-        bullets: [
-          'Engineered Selenium/JUnit tests with data-driven coverage.',
-          'Exercised REST services for Spring Boot apps with contract assertions.',
-          'Maintained PR smoke packs, nightly regression, and flaky test triage.'
-        ],
+      domain: 'Banking / Finance',
+      summary: 'Designed and developed Spring Boot microservices for enterprise-wide applications.',
+      bullets: [
+        'Implemented REST APIs with versioning and JWT-based authentication.',
+        'Architected event-driven integrations using Apache Kafka for real-time processing.',
+        'Managed AWS infrastructure (EC2, S3, RDS) and deployed on Kubernetes (EKS).',
+        'Built reactive front-end components with React.js and Redux.',
+        'Utilized MongoDB for document storage and aggregation pipelines.'
+      ],
       stack: [
-        { label: 'Selenium' }, { label: 'JUnit' }, { label: 'Postman' },
-        { label: 'Jenkins' }, { label: 'AWS' }, { label: 'Kafka' }
+        { label: 'Java' }, { label: 'Spring Boot' }, { label: 'React.js' }, { label: 'Kafka' },
+        { label: 'AWS' }, { label: 'MongoDB' }, { label: 'Kubernetes' }
       ]
     }
   ];
