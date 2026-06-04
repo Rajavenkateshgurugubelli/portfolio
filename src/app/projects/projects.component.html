@@ -6,8 +6,8 @@
 
     <div class="projects-grid">
         <div *ngFor="let project of projects" class="project-card glass-card fade-in">
-            <div class="project-visual" [style.background]="project.image">
-                <!-- Placeholder for project screenshot -->
+            <div class="project-visual">
+                <img [src]="project.image" class="project-img" [alt]="project.title">
                 <div class="overlay">
                     <a [href]="project.link" target="_blank" class="view-btn">View Code</a>
                 </div>
