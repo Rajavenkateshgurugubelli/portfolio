@@ -32,14 +32,24 @@ export class SkillsComponent {
       description: 'Built scalable microservices, RESTful APIs, and integrated with Hibernate/JPA.'
     },
     {
+      name: 'FastAPI',
+      logo: 'https://www.vectorlogo.zone/logos/fastapi/fastapi-icon.svg',
+      description: 'Built high-performance, asynchronous REST APIs for RAG backends and NLP pipelines.'
+    },
+    {
+      name: 'React.js',
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+      description: 'Designed interactive frontend components and SPAs with state management.'
+    },
+    {
       name: 'Angular',
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg',
-      description: 'Created dynamic, responsive front-end interfaces and SPAs.'
+      description: 'Created enterprise-grade web applications and responsive user interfaces.'
     },
     {
       name: 'Vue.js',
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg',
-      description: 'Designed interactive UI components and managed state for complex web apps.'
+      description: 'Designed interactive UI components and dashboards for utility portals.'
     },
     {
       name: 'AWS',
@@ -49,7 +59,17 @@ export class SkillsComponent {
     {
       name: 'Kafka',
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg',
-      description: 'Implemented event-driven architectures for real-time data processing.'
+      description: 'Implemented event-driven architectures for real-time transaction streams.'
+    },
+    {
+      name: 'LangChain & LangGraph',
+      logo: 'https://www.vectorlogo.zone/logos/langchain/langchain-icon.svg',
+      description: 'Developed RAG orchestrations, conversational agents, and LLM evaluation suites.'
+    },
+    {
+      name: 'XGBoost & ML',
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+      description: 'Trained classifiers for credit card fraud detection and applied data drift analysis.'
     },
     {
       name: 'Docker',
@@ -62,9 +82,9 @@ export class SkillsComponent {
       description: 'Orchestrated microservices deployments using EKS and AKS.'
     },
     {
-      name: 'PostgreSQL',
+      name: 'PostgreSQL & MySQL',
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
-      description: 'Designed schemas, optimized queries, and managed data for enterprise apps.'
+      description: 'Designed schemas, optimized complex queries, and managed transactional databases.'
     },
     {
       name: 'Elasticsearch',
@@ -74,7 +94,7 @@ export class SkillsComponent {
     {
       name: 'Terraform',
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg',
-      description: 'Managed infrastructure as code (IaC) for AWS and Azure resources.'
+      description: 'Managed infrastructure as code (IaC) for AWS and Azure cloud setups.'
     }
   ];
 }
