@@ -1,40 +1,41 @@
 <div class="container">
   <div class="section-header fade-in">
     <h2>Certified <span class="text-gradient">Expertise</span></h2>
+    <p class="section-subtitle">Click on a certification card to view verified competencies.</p>
   </div>
 
   <div class="cert-grid">
-    <a href="https://www.credly.com/badges/0f833f78-46d2-4d81-806d-e012996249b0/public_url" target="_blank"
-      class="cert-card glass-card fade-in">
-      <div class="cert-icon-wrapper">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure"
-          class="cert-icon">
-      </div>
-      <div class="cert-content">
-        <h3>Microsoft Certified</h3>
-        <p>Azure Fundamentals (AZ-900)</p>
-      </div>
-    </a>
+    <div *ngFor="let cert of certifications" 
+         class="cert-card-wrapper fade-in" 
+         (click)="toggleFlip(cert)"
+         tabindex="0"
+         (keydown.enter)="toggleFlip(cert)">
+      <div class="cert-card-inner" [class.flipped]="cert.flipped">
+        
+        <!-- Front Side -->
+        <div class="cert-card-front glass-card">
+          <div class="cert-icon-wrapper">
+            <img *ngIf="cert.icon" [src]="cert.icon" [alt]="cert.issuer" class="cert-icon">
+            <span *ngIf="!cert.icon" class="text-icon">{{ cert.title.charAt(0) }}</span>
+          </div>
+          <div class="cert-content">
+            <h3>{{ cert.issuer }}</h3>
+            <p>{{ cert.title }}</p>
+          </div>
+          <div class="cert-hint">Click to flip 🔄</div>
+        </div>
 
-    <a href="https://www.coursera.org/account/accomplishments/specialization/W6CY8MPDRK9H" target="_blank"
-      class="cert-card glass-card fade-in">
-      <div class="cert-icon-wrapper">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"
-          class="cert-icon">
+        <!-- Back Side -->
+        <div class="cert-card-back glass-card">
+          <h4 class="back-title">Verified Competencies</h4>
+          <p class="cert-back-desc">{{ cert.description }}</p>
+          <div class="cert-skills-list">
+            <span *ngFor="let skill of cert.skills" class="cert-skill-tag">{{ skill }}</span>
+          </div>
+          <div class="cert-hint">Click to flip 🔄</div>
+        </div>
+
       </div>
-      <div class="cert-content">
-        <h3>Meta</h3>
-        <p>Front-End Developer Specialization</p>
-      </div>
-    </a>
-    <a href="#" class="cert-card glass-card fade-in">
-      <div class="cert-icon-wrapper">
-        <span class="text-icon">T</span>
-      </div>
-      <div class="cert-content">
-        <h3>Tricentis Tosca</h3>
-        <p>Test Design Specialist Level 1 & 2</p>
-      </div>
-    </a>
+    </div>
   </div>
 </div>

@@ -4,13 +4,34 @@
     <p class="section-subtitle">Technologies I use to build scalable solutions.</p>
   </div>
 
+  <div class="skills-filter fade-in">
+    <button *ngFor="let cat of categories" 
+            [class.active]="selectedCategory === cat.id" 
+            (click)="selectCategory(cat.id)" 
+            class="filter-btn">
+      {{ cat.label }}
+    </button>
+  </div>
+
   <div class="skills-grid">
-    <div *ngFor="let skill of skills" class="skill-card glass-card fade-in" tabindex="0">
+    <div *ngFor="let skill of filteredSkills" 
+         class="skill-card glass-card fade-in" 
+         (click)="toggleExpand(skill)" 
+         tabindex="0"
+         (keydown.enter)="toggleExpand(skill)">
       <div class="skill-icon-wrapper">
         <img [src]="skill.logo" [alt]="skill.name" class="skill-icon">
       </div>
       <h3 class="skill-name">{{ skill.name }}</h3>
       <p class="skill-desc">{{ skill.description }}</p>
+      
+      <!-- Sub-tools details -->
+      <div *ngIf="skill.expanded" class="skill-details-tray fade-in">
+        <div class="skills-divider"></div>
+        <div class="skill-tools-row">
+          <span *ngFor="let tool of skill.tools" class="sub-tool-badge">{{ tool }}</span>
+        </div>
+      </div>
     </div>
   </div>
 </div>

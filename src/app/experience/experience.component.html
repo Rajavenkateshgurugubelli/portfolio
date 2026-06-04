@@ -7,7 +7,7 @@
   <div class="timeline">
     <div *ngFor="let role of roles; let last = last" class="timeline-item fade-in">
       <div class="timeline-marker"></div>
-      <div class="timeline-content glass-card">
+      <div class="timeline-content glass-card" (click)="toggleExpand(role)" tabindex="0" (keydown.enter)="toggleExpand(role)">
         <div class="role-header">
           <div>
             <h3 class="role-title">{{ role.title }}</h3>
@@ -18,11 +18,18 @@
 
         <p class="role-summary">{{ role.summary }}</p>
 
-        <ul class="role-bullets">
-          <li *ngFor="let bullet of role.bullets">{{ bullet }}</li>
-        </ul>
+        <div class="expand-indicator">
+          <span class="indicator-text">{{ role.expanded ? 'Hide Accomplishments' : 'View Accomplishments' }}</span>
+          <span class="arrow-icon" [class.rotated]="role.expanded">↓</span>
+        </div>
 
-        <div class="role-stack">
+        <div *ngIf="role.expanded" class="bullets-container fade-in">
+          <ul class="role-bullets">
+            <li *ngFor="let bullet of role.bullets">{{ bullet }}</li>
+          </ul>
+        </div>
+
+        <div class="role-stack" (click)="$event.stopPropagation()">
           <span *ngFor="let tech of role.stack" class="tech-tag">{{ tech.label }}</span>
         </div>
       </div>

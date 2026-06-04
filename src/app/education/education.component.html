@@ -4,7 +4,7 @@
   </div>
 
   <div class="edu-grid">
-    <div class="edu-card glass-card fade-in">
+    <div class="edu-card glass-card fade-in" (click)="toggleDetails()" tabindex="0" (keydown.enter)="toggleDetails()">
       <div class="edu-icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
           stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -19,6 +19,17 @@
           <span>Lubbock, Texas</span>
           <span class="dot">•</span>
           <span>2022 - 2024</span>
+        </div>
+        
+        <button class="edu-btn" aria-label="Toggle coursework details">
+          {{ showDetails ? 'Hide Coursework' : 'View Key Coursework' }}
+          <span class="arrow" [class.rotated]="showDetails">↓</span>
+        </button>
+
+        <div *ngIf="showDetails" class="edu-details fade-in">
+          <div class="course-grid">
+            <span *ngFor="let course of courses" class="course-tag">{{ course }}</span>
+          </div>
         </div>
       </div>
     </div>

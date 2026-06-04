@@ -10,6 +10,7 @@ type Role = {
   summary: string;
   bullets: string[];
   stack: Chip[];
+  expanded?: boolean;
 };
 
 @Component({
@@ -20,6 +21,10 @@ type Role = {
   styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent {
+  toggleExpand(role: Role) {
+    role.expanded = !role.expanded;
+  }
+
   roles: Role[] = [
     {
       company: 'Ebay',
