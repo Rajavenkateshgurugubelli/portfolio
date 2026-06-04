@@ -38,6 +38,13 @@ export class SkillsComponent {
       tools: ['JVM', 'Spring Boot', 'Spring Cloud', 'JUnit', 'Hibernate', 'Maven']
     },
     {
+      name: 'Python',
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+      description: 'Proficient in building asynchronous APIs, scripting, ML modeling, and integrating RAG knowledge engines.',
+      category: 'backend',
+      tools: ['FastAPI', 'Django', 'Pytest', 'Poetry', 'Jupyter', 'Pandas']
+    },
+    {
       name: '.NET Core',
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg',
       description: 'Developed high-performance REST APIs and backend services using C# and ASP.NET Core.',
