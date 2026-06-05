@@ -164,6 +164,13 @@ export class SkillsComponent {
       tools: ['Full-text Search', 'Inverted Indexes', 'Elastic Queries']
     },
     {
+      name: 'MongoDB',
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+      description: 'Designed schema-less document databases, aggregation pipelines, and indexing strategies.',
+      category: 'database',
+      tools: ['Mongoose', 'Aggregation Framework', 'Index Optimization', 'GridFS', 'Atlas']
+    },
+    {
       name: 'Terraform',
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg',
       description: 'Managed infrastructure as code (IaC) for AWS and Azure cloud setups.',
